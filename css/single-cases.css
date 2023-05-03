@@ -1,0 +1,20 @@
+#single_case{
+    padding: 0 3%;
+}
+.container{
+    padding-top: 5%;
+}
+.attachment-post-thumbnail{
+    display: none;
+}
+.current_tax{
+    display: flex;
+}
+.this_tag{
+    padding-right: 1rem;
+}
+.cat_name:after{
+    content: '➜';
+    color: #005BBB;
+    padding-left: 0.5rem;
+}

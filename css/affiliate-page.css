@@ -1,0 +1,904 @@
+body #page {
+  position: relative;
+  /* overflow: hidden; */
+}
+body .site-footer {
+  position: relative;
+  z-index: 6;
+}
+body .footer_hr {
+  position: relative;
+  z-index: 6;
+}
+body .footer-privacy-policy {
+  position: relative;
+  z-index: 6;
+}
+.hero, .affiliate-marketing, .affiliate-more, .contacts-hero{
+  overflow: hidden;
+}
+.decoration-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-decoration {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(80px);
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.hero .decoration-container .background-decoration:nth-child(1) {
+  width: 18vw;
+  height: 18vw;
+  background-color: #cfb4ff;
+  top: -5%;
+  left: -5%;
+}
+.hero .decoration-container .background-decoration:nth-child(2) {
+  width: 20vw;
+  height: 20vw;
+  background-color: #00d2d2;
+  bottom: -10%;
+  left: 20%;
+}
+.hero .decoration-container .background-decoration:nth-child(3) {
+  width: 14vw;
+  height: 14vw;
+  background-color: #ffc444;
+  top: 25%;
+  left: 50%;
+}
+.hero .decoration-container .background-decoration:nth-child(4) {
+  width: 14vw;
+  height: 14vw;
+  background-color: #cfb4ff;
+  top: 45%;
+  left: 55%;
+}
+.hero .decoration-container .background-decoration:nth-child(5) {
+  width: 14vw;
+  height: 14vw;
+  background-color: #00d2d2;
+  top: 28%;
+  left: 75%;
+}
+.hero .decoration-container .background-decoration:nth-child(6) {
+  width: 14vw;
+  height: 14vw;
+  background-color: #cfb4ff;
+  top: -5%;
+  right: -5%;
+}
+.hero > .container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+.hero__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.hero__left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 3rem;
+  justify-content: center;
+}
+.hero__left h1 {
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  line-height: 1.2;
+  color: black;
+  margin: 0;
+}
+.hero__left p {
+  max-width: 850px;
+  width: 100%;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.375;
+  color: black;
+  margin: 0;
+}
+.hero__left button {
+  padding: 1rem 2rem;
+  background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  gap: 1rem;
+}
+.hero__left button:hover {
+    background: linear-gradient(90.44deg, #ffda1d 0.5%, #ffba1b 100.05%);
+    color: var(--rh-green-color);
+    transition: all .3s ease-in-out;
+  }
+  .hero__left button:hover svg path {
+    fill: #005bbb;
+    transition: all .3s ease-in-out;
+  }
+.hero__left h1 span {
+  color: var(--rh-green-color);
+}
+.hero__right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero__right img {
+  object-fit: contain;
+}
+.affiliate-marketing {
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+  overflow: inherit;
+}
+.affiliate-marketing .decoration-container {
+  z-index: 1;
+}
+.affiliate-marketing .decoration-container .background-decoration:nth-child(1) {
+  width: 20vw;
+  height: 20vw;
+  background-color: #ffc444;
+  top: 30%;
+  left: 0;
+}
+.affiliate-marketing .decoration-container .background-decoration:nth-child(2) {
+  width: 30vw;
+  height: 30vw;
+  background-color: #cfb4ff;
+  bottom: -15%;
+  right: 0;
+}
+.affiliate-marketing-header {
+  padding: 6rem 0 16rem 0;
+  padding-inline: var(--zen-padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--rh-green-color);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.affiliate-marketing-header .affiliate-marketing-header-circle-small {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 14%;
+  right: 22%;
+  background: linear-gradient(101.45deg, #00e7a1 0.34%, #278fff 96.7%);
+  border-radius: 50%;
+  z-index: 1;
+}
+.affiliate-marketing-header .affiliate-marketing-header-circle-big {
+  width: 16rem;
+  height: 16rem;
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+  border-radius: 50%;
+  z-index: 1;
+}
+.affiliate-marketing-left {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+.affiliate-marketing-left h2 {
+  color: white;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.affiliate-marketing-left p {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.affiliate-marketing-right {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 2;
+}
+.affiliate-marketing-right button {
+  padding: 1rem 2rem;
+  background: linear-gradient(90.44deg, #ffda1d 0.5%, #ffba1b 100.05%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.affiliate-marketing-right button:hover {
+    background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+    color: #ffda1d;
+    transition: all .3s ease-in-out;
+}
+.affiliate-marketing-right button:hover svg path {
+    fill: #ffda1d;
+    transition: all .3s ease-in-out;
+  }
+.affiliate-marketing-bottom {
+  margin-top: -9rem;
+  padding-inline: var(--zen-padding);
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
+}
+.affiliate-card {
+  padding: 4.5rem 4.25rem 3.5rem 4.25rem;
+  width: 47%;
+  box-shadow: 0px 13px 21px rgba(0, 0, 0, 0.05), 0px 0px 8px rgba(0, 0, 0, 0.03),
+    0px 8px 13px rgba(0, 0, 0, 0.03), 0px 8px 21px rgba(0, 0, 0, 0.03);
+  border-radius: 0.5rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+.affiliate-card .header {
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffda1d;
+  border-radius: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #5a5a5a;
+}
+.affiliate-card img {
+  max-width: 281px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.affiliate-card h3 {
+  font-size: 1.5rem;
+  color: black;
+  margin: 0;
+}
+.affiliate-card h3 span {
+  color: var(--rh-green-color);
+}
+.affiliate-card ul {
+  margin-left: 2rem;
+  list-style-type: square;
+  min-height: 290px;
+}
+.affiliate-card ul li::marker {
+  font-size: 30px;
+  color: #ffda1d;
+  line-height: 0;
+}
+.affiliate-card ul li {
+  color: black;
+}
+.affiliate-card button {
+  padding: 1rem 2rem;
+  background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.affiliate-card button:hover {
+    background: linear-gradient(90.44deg, #ffda1d 0.5%, #ffba1b 100.05%);
+    color: var(--rh-green-color);
+    transition: all .3s ease-in-out;
+  }
+  .affiliate-card button:hover svg path {
+    fill: #005bbb;
+    transition: all .3s ease-in-out;
+  }
+.affiliate-more {
+  padding-top: 4rem;
+  position: relative;
+  z-index: 4;
+  overflow: inherit;
+}
+.affiliate-more .decoration-container {
+  z-index: 1;
+}
+.affiliate-more .decoration-container .background-decoration:nth-child(1) {
+  width: 18vw;
+  height: 18vw;
+  bottom: -30%;
+  left: -2%;
+  background-color: #00d2d2;
+}
+.affiliate-more-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+.affiliate-more-left {
+  width: 35%;
+  display: flex;
+}
+.affiliate-more-left img {
+  max-width: 362px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.affiliate-more-right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2.5rem;
+}
+.affiliate-more-right h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin: 0;
+}
+.affiliate-more-right h2 span {
+  color: var(--rh-green-color);
+}
+
+.affiliate-more-right p {
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+.affiliate-more-social {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 2.5rem;
+}
+.affiliate-more-social-item {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+  border-radius: 50%;
+}
+.affiliate-more-social-item i:before {
+  font-size: 30px;
+  color: white;
+}
+
+.contacts-hero {
+  position: relative;
+  z-index: 5;
+  margin-top: 4rem;
+  padding-bottom: 10.5rem;
+}
+.contacts-hero .decoration-container .background-decoration:nth-child(1) {
+  width: 22vw;
+  height: 22vw;
+  bottom: -25%;
+  left: 30%;
+  background-color: #cfb4ff;
+}
+.contacts-hero .decoration-container .background-decoration:nth-child(2) {
+  width: 16vw;
+  height: 16vw;
+  bottom: 20%;
+  right: 0%;
+  background-color: #ffc444;
+}
+.contacts-hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contacts-inner {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.contacts-inner-left {
+  padding-left: 3vw;
+  position: relative;
+  z-index: 1;
+}
+.contacts-inner-left h1 {
+  max-width: 1000px;
+  width: 100%;
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: black;
+  text-align: start;
+  margin: 0;
+}
+.contacts-inner-global {
+  width: 100%;
+  padding-inline: var(--zen-padding);
+  position: absolute;
+  top: 9rem;
+  left: 0;
+  background: linear-gradient(90.44deg, #536dfe 0.5%, #005bbb 100.05%);
+  z-index: 1;
+}
+.contacts-inner-global-content {
+  max-width: 64vw;
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contacts-inner-global h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+.contacts-inner-global-social {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.contacts-inner-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 17rem;
+}
+.contacts-inner-item-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: clamp(0.6rem, 1vw, 1.25rem);
+  background-color: #ffda1d;
+  padding: 1rem;
+}
+.contacts-inner-item-icon i:before {
+  font-size: 3rem;
+  color: black;
+}
+.contacts-inner-item-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+.contacts-inner-item-name {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+.contacts-inner-item-person {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+.contacts-inner-right {
+  padding-right: var(--zen-padding);
+  position: relative;
+  z-index: 2;
+}
+.contacts-inner-right .form_header {
+  background-color: transparent;
+  padding: 0 0 2rem 0;
+}
+.contacts-inner-right .form_content {
+  padding: 2.5rem 4rem;
+}
+.contacts-inner-right .label-container {
+  gap: 1.5rem;
+}
+.contacts-inner-right .label-container input {
+  margin: 0;
+}
+.contacts-inner-right .label-container .send-form-button {
+  margin-top: 0.5rem;
+}
+.contacts-text {
+  padding-inline: var(--zen-padding);
+  margin-top: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 2;
+}
+.contacts-text h3 {
+  color: black;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0;
+}
+.contacts-text h3 span {
+  color: var(--rh-green-color);
+}
+.contacts-text p {
+  color: black;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/*  media  */
+
+@media (max-width: 1800px) {
+  .contacts-inner-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: fit-content;
+  }
+  .contacts-inner-global-content {
+    max-width: 59vw;
+    width: 100%;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+@media (max-width: 1600px) {
+  .contacts-inner-global-content {
+    max-width: 860px;
+  }
+  .contacts-inner-global h2 {
+    font-size: 2rem;
+  }
+  .contacts-inner-item-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .contacts-inner-item-icon i:before {
+    font-size: 40px;
+  }
+  .contacts-inner-item-text {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .affiliate-more {
+    padding-bottom: 4rem;
+  }
+}
+@media (max-width: 1200px) {
+  .contacts-inner {
+    flex-direction: column;
+  }
+  .contacts-inner-global {
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+  }
+  .contacts-inner-global-content {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  .contacts-inner-global-social {
+    gap: 7rem;
+  }
+  .contacts-inner-right {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .contacts-hero {
+    margin-top: 0;
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts-text {
+    margin-top: 0;
+    align-items: center;
+  }
+  .affiliate-more {
+    padding-bottom: 6rem;
+  }
+  .contacts-inner-global-content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .affiliate-marketing-header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .affiliate-marketing-right {
+    width: 100%;
+    justify-content: start;
+  }
+  .affiliate-marketing-bottom {
+    flex-direction: column;
+  }
+  .affiliate-card {
+    width: 100%;
+  }
+  .contacts-inner-global-content {
+    max-width: none;
+  }
+  .contacts-inner-item svg {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 999px) {
+  .hero {
+    padding: 4rem 0 6rem 0;
+  }
+  .hero__inner {
+    flex-direction: column;
+  }
+  .hero__left {
+    width: 100%;
+    margin-top: 5rem;
+  }
+  .hero__left p {
+    font-size: 1.5rem;
+  }
+  .hero__right {
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__right img {
+    /* width: 20rem; */
+    width: auto;
+  }
+  .affiliate-marketing-header {
+    flex-direction: column;
+    align-items: start;
+  }
+  .affiliate-marketing-left {
+    width: 100%;
+  }
+  .affiliate-marketing-right {
+    width: 100%;
+    justify-content: start;
+  }
+  .affiliate-card {
+    width: 100%;
+    margin: auto;
+  }
+  .affiliate-more-left img {
+    /* width: 20rem; */
+    width: auto;
+    margin: auto;
+    max-width: 100%;
+  }
+  .affiliate-marketing-header .affiliate-marketing-header-circle-big {
+    display: none;
+  }
+  .affiliate-marketing-header .affiliate-marketing-header-circle-small {
+    display: none;
+  }
+  .affiliate-more-inner {
+    flex-direction: column;
+  }
+  .affiliate-more-left {
+    width: 100%;
+  }
+  .affiliate-more-right {
+    width: 100%;
+  }
+  /* .affiliate-more-left img {
+    max-width: none;
+  } */
+
+}
+
+@media (max-width: 768px) {
+  .affiliate-card button{
+    margin: auto;
+  }
+  .contacts-inner-global h2 {
+    max-width: none;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .contacts-inner-global-content {
+    padding: 4rem 0;
+    flex-direction: column;
+    max-width: 490px;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contacts-inner-item-person {
+    white-space: nowrap;
+  }
+  .contacts-inner-right {
+    margin-top: -11rem;
+    padding: 0 3%;
+  }
+  .contacts-inner {
+    gap: 0rem;
+  }
+  .contacts-inner-right .form_header span {
+    font-size: 1.5rem;
+  }
+  .contacts-inner-global {
+    padding-bottom: 13rem;
+  }
+  .contacts-inner-global-social {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .contacts-text {
+    width: 100%;
+    max-width: 490px;
+    align-items: start;
+    margin: 0 auto;
+  }
+  .contacts-inner-right .form_header {
+    text-align: start;
+    color: white;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__left {
+    gap: 2rem;
+  }
+  .hero__left h1 {
+    font-size: 1rem;
+  }
+  .hero__left p {
+    font-size: 1rem;
+  }
+  .affiliate-card {
+    padding: 4.5rem 1.5rem 3.5rem 1.5rem;
+  }
+  .affiliate-card img {
+    max-width: 210px;
+  }
+  .affiliate-more-right h2 {
+    font-size: 1.5rem;
+  }
+  .affiliate-more-right {
+    gap: 1.25rem;
+  }
+  .contacts-inner-right .form_content {
+    padding: 1rem 1.25rem 2.5rem 1.25rem;
+  }
+  .contacts-text h3 {
+    font-size: 1.5rem;
+  }
+  .affiliate-marketing-left h2 {
+    font-size: 1.5rem;
+  }
+  .affiliate-marketing-left p {
+    font-size: 1rem;
+  }
+  .affiliate-more-social-item {
+    width: 50px;
+    height: 50px;
+  }
+  .affiliate-card {
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1600px) {
+  .contacts-inner-global-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .contacts-inner-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+  }
+  .contacts-text {
+    margin-top: 9rem;
+  }
+  .contacts-inner-right {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 1400px) {
+  .contacts-inner-global-content {
+    max-width: 56%;
+  }
+}
+@media (max-width: 1221px) {
+  .contacts-inner-global-social {
+    justify-content: start;
+  }
+  .contacts-inner-right {
+    margin-top: 4rem;
+  }
+  .contacts-inner-item {
+    width: 330px;
+  }
+  .contacts-text {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts-inner-global-content {
+    max-width: 100%;
+  }
+  .contacts-inner-global-social {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .contacts-inner-item {
+    width: 20rem;
+  }
+  .contacts-inner-global {
+    padding-bottom: 0rem;
+  }
+  .contacts-inner-item:last-child {
+    margin-top: 3rem;
+  }
+}
+@media (max-width: 1101px) {
+  .contacts-inner-item:last-child {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-inner-global-social {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  .contacts-inner-right .form_header span {
+    color: #000;
+  }
+}
+/*!*# sourceMappingURL=affiliate-page.css.map *!*/

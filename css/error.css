@@ -1,0 +1,74 @@
+:root {
+    --rh-green-color: #005BBB;
+}
+
+.error {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+}
+.error .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.error .section-title {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.error .subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+.error .section-subtitle {
+    font-size: var(--font-size-1-5);
+    font-weight: 400;
+    margin: 0 0 0 1.3rem;
+    text-align: center;
+}
+.error .rh-button {
+    border-radius: 6px;
+    color: white;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .error {
+        height: auto;
+    }
+    .error .section-title {
+        order: 1;
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: .5rem;
+    }
+    .error img {
+        order: 2;
+    }
+    .error .subtitle-container {
+        order: 3;
+        margin-top: 2.3rem;
+    }
+    .error svg {
+        width: 15px;
+        height: 35px;
+    }
+    .error .section-subtitle {
+        font-size: var(--font-size-1-2);
+    }
+    .error .rh-button {
+        order: 4;
+        width: 100%;
+    }
+}
+@media (max-height: 700px ) {
+    .error {
+        height: auto;
+        margin-top: 4rem;
+    }
+}

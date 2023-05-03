@@ -1,0 +1,478 @@
+:root {
+    --rh-accent-color: #f1c40f;
+    --rh-accent-color-lighten: #FFD500;
+    --rh-accent-color-darken: #FFD500;
+    --rh-green-color: #005BBB;
+    --rh-grey-c8: #c8c8c8;
+    --rh-grey-d8: #d8d8d8;
+    --rh-dark-grey: #54595f;
+    --rh-light-grey: #ececec;
+    --rh-black: #222;
+    --rh-grey-text: #7a7a7a;
+    --rh-light-grey-text: #bcbcbc;
+    --scrollbar-width: 8px;
+    --zen-padding: calc((100vw - var(--scrollbar-width)) / 20);
+    --rh-box-shadow: 6px 4px 10px rgb(0 0 0 / 10%);
+    --font-size-1-125: 1.125rem;
+    --font-size-1-2: 1.2rem;
+    --font-size-1-5: 1.5rem;
+    --font-size-1-18: 1.18rem;
+    --border-radius: 8px;
+}
+
+
+.container-blog {
+    padding: 4rem 3% 5rem;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-blog h1 {
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: 2.25em;
+    font-weight: 900;
+    text-transform: uppercase;
+
+}
+
+.container-blog .blog-news:nth-child(1) {
+    margin-bottom: 4rem;
+}
+
+.container-blog .blog-news .blog-suptitle  {
+    display: flex;
+    align-items: center;
+}
+
+.container-blog .blog-news .blog-suptitle span {
+    font-size: .8em;
+    color: #f40045;
+}
+
+.container-blog .blog-news .blog-suptitle:before {
+    display: block;
+    margin-right: 5px;
+    content: '';
+    width: 30px;
+    height: 1px;
+    background-color: black;
+}
+
+.container-blog .blog-news .blog-title {
+    margin: 0 0 2rem;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.container-blog .blog-news .blog-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    margin: 0 3.5rem;
+    position: relative;
+}
+
+.container-blog .blog-news .blog-content .blog-item {
+    padding: 2rem 1rem;
+    display: flex;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    position: relative;
+    background-color: white;
+}
+
+.container-blog .blog-news .blog-content .blog-item:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(75deg, #FFFFFF 55%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 1rem;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    width: 100%;
+    align-items: start;
+    z-index: 3;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: var(--font-size-1-125);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text span {
+    margin-bottom: 1rem;
+    display: block;
+    color: #f40045;
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text .more-link {
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: .6rem 1.6rem;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--rh-green-color);
+    box-shadow: none;
+    transition: .3s ease-in-out;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-text .more-link:hover {
+    border-radius: .5rem;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-link {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.container-blog .blog-news .blog-content .blog-item .blog-item-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+/* Contact form */
+
+main .container-blog .home-contact {
+    max-width: 1170px;
+    padding: 5rem 0;
+    margin: 6rem auto;
+    background-image: none;
+    box-shadow: 0px 10px 25px -3px rgb(0 0 0 / 15%);
+}
+
+.contact-form {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.contact-form h3 {
+    margin: 0;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.contact-form .social ul {
+    display: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-form .social ul li a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.contact-form .social i {
+    color: var(--rh-green-color);
+    font-size: 2.2rem;
+}
+
+.contact-form .form-wrap {
+    max-width: 560px;
+    width: 100%;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form form>* {
+    padding-block: 0.6rem;
+}
+
+.contact-form form input[type=submit] {
+    background-color: var(--rh-green-color);
+    color: white;
+    border: none;
+}
+
+.contact-form form input[type=submit]:hover {
+    background-color: var(--rh-accent-color);
+}
+
+.contact-form .cta {
+    width: 75%;
+}
+
+.contact-form .cta h3 {
+    font-size: clamp(2.375rem, 4vw, 2.8rem);
+    margin-block: 1rem;
+}
+
+.contact-form .cta span {
+    display: block;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.container-blog .home-contact .contact-social-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.container-blog .home-contact .contact-social-mobile li i {
+    color: var(--rh-green-color);
+    width: 33px;
+    height: 33px;
+}
+
+/*  Sticky Post on blog  */
+
+.container-blog .blog-news .blog-content.blog-sticky {
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item {
+    padding: 5rem 2rem 2rem;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 2rem;
+    flex-direction: column;
+    background-color: white;
+}
+.container-blog .blog-news .blog-content.blog-sticky .blog-item:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #005BBB 1.31%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 2rem;
+    z-index: 1;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .blog-item-text {
+    max-width: 352px;
+    width: 100%;
+    z-index: 2;
+    color: white;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .blog-item-text h3 {
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1.2;
+    color: white;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .blog-item-link {
+    width: 100%;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .blog-item-link img {
+    border-radius: 2rem;
+}
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .more-link {
+    padding: .6rem 1.6rem;
+    margin-left: auto;
+    color: var(--rh-green-color);
+    margin-top: auto;
+    margin-bottom: 0;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: white;
+    z-index: 2;
+    box-shadow: none;
+    transition: .3s ease-in-out;
+}
+
+.container-blog .blog-news .blog-content.blog-sticky .blog-item .more-link:hover {
+    border-radius: .5rem;
+}
+
+.container-blog .posts-navigation {
+    margin-top: 4rem;
+}
+
+.background-decoration-circle {
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: var(--rh-accent-color);
+    position: absolute;
+    z-index: -10;
+    filter: blur(70px) saturate(150%);
+}
+
+.background-decoration-circle:nth-child(1) {
+    top: -4%;
+    left: -8%;
+}
+
+.background-decoration-circle:nth-child(2) {
+    width: 11vw;
+    height: 11vw;
+    top: 8%;
+    left: 62%;
+    background-color: #F55F6E;
+    z-index: -11;
+}
+
+.background-decoration-circle:nth-child(3) {
+    width: 6vw;
+    height: 6vw;
+    top: 29%;
+    left: 28%;
+    background-color: var(--rh-green-color);
+    filter: saturate(5) blur(40px);
+}
+
+.background-decoration-circle:nth-child(4) {
+    top: 68%;
+    left: 85%;
+}
+
+.background-decoration-circle:nth-child(5) {
+    top: 48%;
+    left: 2%;
+    background-color: var(--rh-decoration-yellow);
+    filter: blur(40px);
+}
+
+.background-decoration-circle:nth-child(6) {
+    width: 8vw;
+    height: 8vw;
+    top: 90%;
+    left: 45%;
+    background-color: var(--rh-green-color);
+}
+
+.background-decoration-circle:nth-child(7) {
+    width: 15vw;
+    height: 15vw;
+    top: 8%;
+    left: 55%;
+    background-color: var(--rh-green-color);
+}
+
+.background-decoration-circle:nth-child(8) {
+    width: 10vw;
+    height: 10vw;
+    top: 48%;
+    left: 2%;
+    background-color: #FF5252;
+}
+
+
+/* media */
+
+@media (max-width: 1024px) {
+    .container-blog .blog-news .blog-content.blog-sticky {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-blog .blog-news .blog-content.blog-sticky .blog-item {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .container-blog .blog-news .blog-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .container-blog .blog-news .blog-content.blog-sticky .blog-item {
+        padding: 2rem;
+    }
+    .container-blog .blog-news .blog-content {
+        margin: 0;
+    }
+}
+
+
+@media (min-width: 990px) {
+    .container-blog .home-contact .contact-social-mobile {
+        display: none;
+    }
+
+    .container-blog .home-contact .contact-form .social ul {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        grid-template-columns: repeat(2, 1fr);
+        padding-inline: 5%;
+    }
+
+    .contact-form .cta h3 {
+        text-align: end;
+    }
+
+    .contact-form .cta span {
+        text-align: end;
+    }
+}
+
+/*# sourceMappingURL=contact-form-component.css.map */
+
+/* p empty remove */
+
+.container-blog .blog-news .blog-content .blog-item p:empty  {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

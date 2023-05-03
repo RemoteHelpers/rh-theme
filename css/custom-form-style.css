@@ -1,0 +1,167 @@
+/*JS FORM FRONT END Styles*/
+.label-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label-container label{
+    width: 16rem;
+    margin: 0.5rem;
+     font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    color: #7A7A7A;
+    padding-bottom: 0.25rem;
+}
+.label-container input{
+    margin: 0.5rem;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat';
+}
+.label-container textarea{
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat';
+}
+
+.required-fields{
+    padding: 1rem;
+    color: #54595F;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.label-container .send-form-button{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    background-color: #005BBB;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    margin-top: 2rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.send-form-button:hover{
+   color:#54595f;
+   background-color: #fcb900; 
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*MODAL WINDOW Styles*/
+.backdrop{
+    display: none;
+    font-family: 'Montserrat';
+    text-align: center;
+    background: #fff;
+    padding: 2rem;
+    position: absolute;
+    z-index: 2;
+    width: 25rem;
+    left: 50%;
+    margin-left: -12.5rem;
+    border-radius: 5px;
+    animation-duration: 1s;
+    animation-name: slidein;
+    transition: 0.3s;
+    margin-top: -23.1%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+}
+/*Animating MODAL WINDOW (OPEN)*/
+@keyframes slidein {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    left: 50%;
+    margin-left: -12.5rem;
+  }
+}
+.is-visible{
+    display: block;
+}
+
+/*CLOSE BUTTON Styles*/
+.modal-btn{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    background-color: #005BBB;
+    border-radius: 3px;
+    color: #fff;
+    border: none;
+    height: 2.5rem;
+    width: 16rem;
+    margin-top: 0.25rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.modal-btn:hover{
+   color:#54595f;
+   background-color: #fcb900; 
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+.backdrop h2{
+    margin-top: 0;
+    color: #fcb900;
+}
+.backdrop h3, h4, h5{
+    font-weight: 100;
+}
+.backdrop h5{
+    font-style: italic;
+}
+.backdrop #client_id{
+    text-align: center;
+}
+.blur-form{
+    filter: blur(2px);
+}
+
+@media (max-width: 960px){
+    .backdrop{
+        position: absolute;
+        width: 22.2rem;
+        left: 50%;
+        margin-left: -11.1rem;
+        border-radius: 5px;
+        animation-duration: 1s;
+        animation-name: slidein;
+        transition: 0.3s;
+        margin-top: -100%;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 30%);
+        padding-bottom: 2.5rem;
+    }
+    .backdrop:after{
+        filter: blur(1000px);
+    }
+    .blur-form{
+        filter: blur(2px);
+    }
+
+    @keyframes slidein {
+        from {
+          margin-top: -300%;
+        }
+        to {
+          left: 50%;
+          margin-left: -11.1rem;
+        }
+      } 
+}

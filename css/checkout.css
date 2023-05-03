@@ -1,0 +1,201 @@
+.checkout .woocommerce-billing-fields input {
+  width: 100%;
+}
+.checkout .required {
+  color: var(--rh-accent-color);
+  font-weight: 700;
+  border: 0 !important;
+  text-decoration: none;
+  visibility: hidden;
+}
+.checkout .form-row {
+  display: flex;
+  flex-direction: column;
+}
+.checkout .woocommerce-checkout-payment {
+  background-color: #ebe9eb;
+  padding: 1rem;
+}
+@media (min-width: 980px) {
+  .checkout .customer-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+/* CHECKOUT PAYMENTS */
+/* PAYPAL */
+.payment_method_eh_paypal_express img{
+  display: none;
+}
+.payment_method_eh_paypal_express p{
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+/* PAYONEER */
+.payment_method_payoneer img{
+  display: none;
+}
+.payment-method-payoneer{
+  background: #E0E0E0;
+  padding: 0;
+  border: none;
+  padding-bottom: 1rem;
+}
+.payment-method-payoneer p{
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  margin-bottom: 0!important;
+}
+.payment-method-payoneer p:first-child{
+  padding-top: 1rem;
+}
+.payment-method-payoneer input{
+  background: #F5F5F5;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  
+  width: 100%;
+  color: #54595F!important;
+  padding: 1rem!important;
+  border: none!important;
+  border-radius: 0.5rem!important;
+  outline: none;
+  border-bottom: none!important; 
+  margin-top: 0.5rem!important;
+}
+.payment-method-payoneer p a{
+  color: #0154ad;
+}
+/* STRIPE */
+#stripe-card-element{
+  outline: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  color: #54595F;
+  height: auto;
+  padding: 1rem;
+  background: #F5F5F5;
+}
+#stripe-exp-element{
+  outline: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  color: #54595F;
+  height: auto;
+  padding: 1rem;
+  background: #F5F5F5;
+}
+#stripe-cvc-element{
+  outline: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  color: #54595F;
+  height: auto;
+  padding: 1rem;
+  background: #F5F5F5;
+}
+#stripe-payment-data{
+  padding-bottom: 1.5rem;
+}
+.wc-stripe-elements-field{
+  height: auto;
+  border-radius: 0.5rem;
+}
+.wc-credit-card-form{
+  border: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+}
+.wc-credit-card-form .form-row-wide{
+  width: 58%;
+}
+.wc-credit-card-form .form-row-first{
+  width: 20%;
+}
+.wc-credit-card-form .form-row-last{
+  width: 20%;
+}
+#stripe-payment-data fieldset{
+border: none;
+padding: 0.25rem 0 0 0;
+}
+#stripe-payment-data .woocommerce-SavedPaymentMethods-saveNew{
+  display: block;
+  margin: 0;
+  }
+#stripe-payment-data .clear{
+    display: none;
+  }
+
+#stripe-payment-data .stripe-source-errors {
+  position: absolute;
+  bottom: -150%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #9e0909;
+  border-radius: 8px;
+  color: #fff;
+}
+
+#payoneer_email{
+    width: 49%;
+}
+#payoneer_transaction_id{
+  width: 49%;
+  float: right;
+}
+@media (max-width: 1670px) {
+  .wc-credit-card-form .form-row-last{
+    width: 30%;
+  }
+}
+@media (max-width: 1366px) {
+  .wc-credit-card-form{
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .wc-credit-card-form .form-row-wide{
+    width: 100%;
+  }
+  .wc-credit-card-form .form-row-first{
+    width: 50%;
+    padding-right: 1%;
+  }
+  .wc-credit-card-form .form-row-last{
+    width: 50%;
+    padding-left: 1%;
+  }
+}
+@media (max-width: 1200px) {
+  #payoneer_email{
+    width: 100%;
+}
+#payoneer_transaction_id{
+  width: 100%;
+  float: none;
+}
+}
+/* SOCIAL LOGIN/REGISTER */
+
+.woocommerce-billing-fields .nsl-container .nsl-container-buttons .nsl-button{
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 5px 0 rgb(0 0 0 / 25%);
+  background-color: #F5F5F5!important;
+  transition: 0.2s;
+}
+.woocommerce-billing-fields .nsl-container .nsl-container-buttons .nsl-button:hover{
+  background-color: #fff!important;
+  transition: 0.2s;
+}
