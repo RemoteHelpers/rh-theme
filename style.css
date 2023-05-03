@@ -1,5 +1,5 @@
 /*!
-Theme Name: clean
+Theme Name: Rh-s Theme
 Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
@@ -820,9 +820,11 @@ textarea {
   display: inline-flex;
   align-content: center;
 }
-.custom-logo{
+
+.custom-logo {
   width: 11.75rem;
 }
+
 /* Captions
 --------------------------------------------- */
 .wp-caption {
@@ -893,27 +895,33 @@ textarea {
 .gallery-caption {
   display: block;
 }
+
 /* COOKIES PLUGIN */
-.cky-btn-preferences{
+.cky-btn-preferences {
   display: none;
 }
-.cky-btn-reject{
+
+.cky-btn-reject {
   display: none;
 }
-.cky-prefrence-btn-wrapper + div{
-  display: none!important;
+
+.cky-prefrence-btn-wrapper+div {
+  display: none !important;
 }
-.cky-show-desc-btn{
-  color: #54595f!important;
+
+.cky-show-desc-btn {
+  color: #54595f !important;
   font-weight: bold;
 }
-.cky-btn-revisit-wrapper{
+
+.cky-btn-revisit-wrapper {
   /* display: none!important; */
-  background-color: #f1c40f!important;
+  background-color: #f1c40f !important;
 }
-.cky-btn-revisit-wrapper .cky-btn-revisit img{
-  width: 40px!important;
-  height: 40px!important;
+
+.cky-btn-revisit-wrapper .cky-btn-revisit img {
+  width: 40px !important;
+  height: 40px !important;
 }
 
 /*--------------------------------------------------------------
@@ -1187,11 +1195,13 @@ html {
   padding-top: 0;
   margin-bottom: 0;
 } */
-.card .card_top .card__product-price .card_corner_price{
+.card .card_top .card__product-price .card_corner_price {
   font-size: 1rem;
 }
+
 /* CARDS SKILLS */
-.skill-items, .industry-items {
+.skill-items,
+.industry-items {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -1203,7 +1213,8 @@ html {
   align-items: center;
 }
 
-.skill-items a, .industry-items a {
+.skill-items a,
+.industry-items a {
   transition: 0.3s;
   border-radius: 2rem;
   padding: 0.4rem 1rem;
@@ -1215,7 +1226,8 @@ html {
   height: fit-content;
 }
 
-.skill-items a:hover, .industry-items a:hover {
+.skill-items a:hover,
+.industry-items a:hover {
   background-color: #005BBB;
   color: #FFFFFF;
 }
@@ -1236,14 +1248,16 @@ html {
   justify-content: flex-start;
   width: auto;
 }
-.work_exp_list{
+
+.work_exp_list {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: .5rem;
   align-items: center;
 }
-.work_exp_title{
+
+.work_exp_title {
   width: auto;
   min-width: fit-content;
 }
@@ -1271,6 +1285,7 @@ html {
   .content-with-sidebar.fullSize {
     grid-template-columns: 0 auto;
   }
+
   /* .fullSize .similar_slider{
     justify-content: center;
     gap: 2rem;
@@ -1326,15 +1341,17 @@ html {
     left: 0;
   }
 }
-.pwf-sticky-filter{
+
+.pwf-sticky-filter {
   z-index: 9 !important;
 }
-.rh-notices-wrapper .woocommerce-error{
+
+.rh-notices-wrapper .woocommerce-error {
   position: fixed;
   right: 3%;
   top: 61px;
   border-top: 2px solid #005BBB;
-  background-color: rgba(255,255,255,.85);
+  background-color: rgba(255, 255, 255, .85);
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
   box-shadow: 0 3px 3px rgb(0 0 0 / 20%);
@@ -1342,9 +1359,11 @@ html {
   z-index: 15;
   animation: css 0s 3s forwards;
 }
+
 .rh-notices-wrapper .woocommerce-info {
   display: none;
 }
+
 .ajax-woocommerce-message {
   position: fixed;
   right: 3%;
@@ -1360,22 +1379,29 @@ html {
   padding: 1rem;
   z-index: 15;
 }
-@media (max-width: 768px){
-  .rh-notices-wrapper{
+
+@media (max-width: 768px) {
+  .rh-notices-wrapper {
     width: 100%;
     text-align: center;
     right: 0;
   }
-    
+
 }
 
-@keyframes css  { to { visibility: hidden; } }
-                    /* visibility / overflow: hidden; */
+@keyframes css {
+  to {
+    visibility: hidden;
+  }
+}
 
-.woocommerce-error li{
+/* visibility / overflow: hidden; */
+
+.woocommerce-error li {
   padding: 1rem;
 }
-.woocommerce-message{
+
+.woocommerce-message {
   padding: 1rem;
 }
 
@@ -1396,25 +1422,29 @@ img[data-src][src] {
 
 /* SCROLL ANIMATION */
 .bc-circle.element-hidden {
-	opacity: 0;
+  opacity: 0;
   /* transform: scale(0); */
 }
+
 .bc-circle.element-show {
-	opacity: 1;
+  opacity: 1;
   /* transform: scale(1); */
-	transition: all 4s;
+  transition: all 4s;
 }
+
 .element-hidden {
-	opacity: 0;
-	transform: translateY(5%);
+  opacity: 0;
+  transform: translateY(5%);
 }
+
 .element-show {
-	opacity: 1;
-	transform: translateY(0%)!important;
-	transition: all 1s;
+  opacity: 1;
+  transform: translateY(0%) !important;
+  transition: all 1s;
 }
+
 /* CAT FILTER */
-.content-with-sidebar .products{
+.content-with-sidebar .products {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   justify-items: center;
@@ -1423,7 +1453,8 @@ img[data-src][src] {
   width: auto;
   grid-auto-columns: 20rem;
 }
-.product_list_end_baner{
+
+.product_list_end_baner {
   background: RGBA(255, 255, 255, 0.9);
   border-radius: 0.5rem;
   box-shadow: 0rem 0.25rem 2.5rem rgb(0 0 0 / 7%), 0rem 0.813rem 1.313rem rgb(0 0 0 / 5%), 0rem 0rem 0.5rem rgb(0 0 0 / 3%), 0rem 0.5rem 0.813rem rgb(0 0 0 / 3%), 0rem 2.25rem 2rem rgb(0 0 0 / 5%);
@@ -1433,7 +1464,8 @@ img[data-src][src] {
   justify-content: center;
   width: 100%;
 }
-.category_more_button{
+
+.category_more_button {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-family: 'Montserrat';
@@ -1445,20 +1477,24 @@ img[data-src][src] {
   color: #fff;
   transition: all 0.2s;
 }
-.category_more_button:hover{
+
+.category_more_button:hover {
   background-color: #ffd500;
   color: #54595f;
 }
-.content-with-sidebar .products{
+
+.content-with-sidebar .products {
   column-gap: 3rem;
   justify-content: space-between;
   padding: 0 3%;
-    width: 100%;
+  width: 100%;
 }
-.product_list_end_baner{
- flex: auto; 
-      min-height: 10rem;
+
+.product_list_end_baner {
+  flex: auto;
+  min-height: 10rem;
 }
-.current_category_products{
+
+.current_category_products {
   justify-content: center;
 }
