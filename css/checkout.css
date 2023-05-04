@@ -188,7 +188,6 @@ padding: 0.25rem 0 0 0;
 }
 }
 /* SOCIAL LOGIN/REGISTER */
-
 .woocommerce-billing-fields .nsl-container .nsl-container-buttons .nsl-button{
   border-radius: 0.5rem;
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 25%);
@@ -198,4 +197,8 @@ padding: 0.25rem 0 0 0;
 .woocommerce-billing-fields .nsl-container .nsl-container-buttons .nsl-button:hover{
   background-color: #fff!important;
   transition: 0.2s;
+}
+/* Hide Payments */
+.wc_payment_methods.payment_methods.methods{
+  display: none;
 }
