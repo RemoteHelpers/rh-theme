@@ -324,7 +324,12 @@
   font-weight: 700;
   width: 100%;
 }
+.founders_tel{
+  display: flex;
+  align-items: center;
+}
 @media (min-width: 650px) {
+
 
   .about-us-page .gallery-gallery-mobile {
     display: none;
@@ -375,9 +380,9 @@
   }
 }
 
-.quote {
+/* .quote {
   height: 120px;
-}
+} */
 
 @media (max-width: 1600px) {
   .staff-card__photo {
@@ -387,15 +392,15 @@
   }
 
 @media (max-width: 1302px) {
-  .quote {
+  /* .quote {
     height: 150px;
-  }
+  } */
   }
 
   @media (max-width: 1133px) {
-    .quote {
+    /* .quote {
       height: 170px;
-    }
+    } */
     .position-wrapper {
       width: 50%;
       margin: auto;
@@ -410,14 +415,14 @@
   }
 
   @media (max-width: 965px) {
-    .quote {
+    /* .quote {
       height: 200px;
-    }
+    } */
     }
   @media (max-width: 937px) {
-    .quote {
+    /* .quote {
       height: 220px;
-    }
+    } */
     }
     @media (max-width: 916px) {
       .position-wrapper {
@@ -425,6 +430,14 @@
       }
       }
   @media (max-width: 767px) {
+    .about-us-page .split-two, .about-us-page .split-three{
+      gap: 2.5rem;
+    }
+    .about-us-page .staff-card{
+      padding: 1.5rem 1rem;
+      box-shadow: 0px 8px 13px rgba(0, 0, 0, 0.08), 0px 8px 21px rgba(0, 0, 0, 0.03);
+      border-radius: 1rem;
+    }
     .our-clients .clients-slider .slick-slide{
       margin-inline: 0.75rem;
     }
@@ -507,6 +520,7 @@
       }
     }
     @media (min-width: 990px) {
+      
       .clients-slider:nth-child(2) {
         margin-bottom: 3rem;
       }
@@ -529,6 +543,7 @@
       .outstaffing .outstaffing__content {
         align-items: start;
       }
+
     }
     @media (min-width: 1440px) {
       .outstaffing .outstaffing__card-front {

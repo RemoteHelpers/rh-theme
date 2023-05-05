@@ -73,15 +73,15 @@ defined( 'ABSPATH' ) || exit;
 						<strong><?php echo wp_kses_post( $order->get_payment_method_title() ); ?></strong>
 					</li>
 				<?php endif; ?>
-
+				<a href="/my-account/subscription"><p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><span class="received-order">View the status of your subscription in your account.</span></p></a>
 			</ul>
-			<a href="/my-account/subscription"><p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><span class="received-order">View the status of your subscription in your account.</span></p></a>
-
+			
+			
 		<?php endif; ?>
-
+		
 		<?php do_action( 'woocommerce_thankyou_' . $order->get_payment_method(), $order->get_id() ); ?>
 		<?php do_action( 'woocommerce_thankyou', $order->get_id() ); ?>
-
+		
 	<?php else : ?>
 
 		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
