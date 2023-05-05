@@ -1595,3 +1595,63 @@ add_filter( 'woocommerce_shortcode_products_query', function( $query_args, $atts
     return $query_args;
 }, 10, 3)
 ?>
+<?php
+//Custom Payment Method
+class Custom_Payment_Gateway extends WC_Payment_Gateway {
+    public function __construct() {
+        $this->id = 'custom_payment_gateway';
+        $this->method_title = 'Subscription Postpaid';
+        $this->method_description = 'Pay with Subscription Postpaid';
+        $this->supports = array( 'subscriptions' );
+        add_action( 'woocommerce_receipt_' . $this->id, array( $this, 'receipt_page' ) );
+    }
+
+    public function process_payment( $order_id ) {
+        $order = wc_get_order( $order_id );
+        $order->update_status( 'completed', __( 'Payment complete.', 'woocommerce' ) );
+        return array(
+            'result' => 'success',
+            'redirect' => $this->get_return_url( $order )
+        );
+    }
+
+    public function receipt_page( $order ) {
+        echo '<p>' . __( 'Thank you for your subscription.', 'woocommerce' ) . '</p>';
+    }
+
+    public function process_subscription_payment( $subscription, $amount, $gateway_id ) {
+        $order_id = WC()->checkout()->create_order();
+        $order = wc_get_order( $order_id );
+
+        $order->add_product( $subscription->get_product(), $subscription->get_quantity() );
+        $order->set_address( $subscription->get_address( 'billing' ), 'billing' );
+        $order->set_address( $subscription->get_address( 'shipping' ), 'shipping' );
+        $order->set_payment_method( $this );
+        $order->calculate_totals();
+
+        $result = $this->process_payment( $order_id );
+        if ( is_wp_error( $result ) ) {
+            throw new Exception( $result->get_error_message() );
+        }
+
+        $subscription->payment_complete();
+        WC_Subscriptions_Manager::activate_subscriptions_for_order( $order );
+
+        return true;
+    }
+}
+
+function add_custom_payment_gateway( $gateways ) {
+    $gateways[] = 'Custom_Payment_Gateway';
+    return $gateways;
+}
+add_filter( 'woocommerce_payment_gateways', 'add_custom_payment_gateway' );
+
+function remove_gateway_title_hyphen( $title, $gateway_id ) {
+    if ( $gateway_id == 'custom_payment_gateway' ) {
+        $title = str_replace( ' -', '', $title );
+    }
+    return $title;
+}
+add_filter( 'woocommerce_gateway_title', 'remove_gateway_title_hyphen', 10, 2 );
+?>
