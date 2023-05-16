@@ -116,7 +116,7 @@ $minimaltime = get_field('minimal_time_employees');
                                         <?php the_field('currency', 'option'); ?><?php the_sub_field('minimum_price'); ?>
                                     </li>
                                     <li class="card-price-per-hour">
-                                    ≈ <?php the_field('currency', 'option'); ?><?php $perh = get_sub_field('minimum_price'); echo $perh / 80;?>
+                                    ≈ <?php the_field('currency', 'option'); ?><?php $perh = get_sub_field('minimum_price'); echo $perh / 40;?>
                                      per hour
                                     </li>
                                     </div>
