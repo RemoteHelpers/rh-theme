@@ -20,7 +20,7 @@
                 $terms = get_terms(['taxonomy' => 'product_cat','hide_empty' => true, 'parent' => 0]);
                 foreach ($terms as $term ) {
                     $cat_id = $term->term_id;
-
+                    $current_language = pll_current_language();
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => -1,
@@ -29,6 +29,7 @@
                                 'taxonomy' => 'product_cat',
                                 'field' => 'term_id',
                                 'terms' => $cat_id,
+                                'lang' => $current_language,
                             )
                         ),
                         'meta_query' => array(
