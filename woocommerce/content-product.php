@@ -206,7 +206,21 @@ if($var_full <= 0 && $var_part <= 0 && $var_min <= 0) {
                     echo '</div>';
                 ?>
 
-                <span>/month</span>
+                <span>
+                    <?php
+                        if (pll_current_language() == 'en') {
+                            echo "/month";
+                        } else if (pll_current_language() == 'de') {
+                            echo "/Monat";
+                        }
+                    ?>
+                    
+                        <!-- if (get_language_attributes() == 'lang="en-US"') {
+                            echo "/month";
+                        } else if (get_language_attributes() == 'lang="de-DE"') {
+                            echo "/Monat";
+                        } -->
+                </span>
                 
                 
             </div>
@@ -290,7 +304,15 @@ if($var_full <= 0 && $var_part <= 0 && $var_min <= 0) {
         </div>
         <footer class="card_bottom">
             <div class="card_line"></div>
-            <a href="<?php echo get_post_permalink() ?>">View Profile</a>
+            <a href="<?php echo get_post_permalink() ?>">
+                <?php
+                    if (pll_current_language() == 'en') {
+                        echo "View Profile";
+                    } else if (pll_current_language() == 'de') {
+                        echo "Profil Ansehen";
+                    }
+                ?>  
+            </a>
             <div class="card_line"></div>
         </footer>
 </article>

@@ -43,5 +43,13 @@
                 wp_reset_query();
                 woocommerce_product_loop_end(); ?>
             </div>
-            <a class="rh-button margin-auto link-button element-hidden" href='<?php echo get_site_url(); ?>/employees'>Watch all available employees</a>
+            <a class="rh-button margin-auto link-button element-hidden" href='<?php echo get_site_url(); ?>/employees'>
+                <?php
+                    if (pll_current_language() == 'en') {
+                        echo "Watch all available employees";
+                    } else if (pll_current_language() == 'de') {
+                        echo "Sehen Sie alle verfügbaren Mitarbeiter";
+                    }
+                ?>
+            </a>
 </section>

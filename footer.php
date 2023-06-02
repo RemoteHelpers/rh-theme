@@ -18,13 +18,28 @@
 <footer id="colophon" class="site-footer">
     <div class="footer-logo"><?php the_custom_logo() ?></div>
     <div class="bottom-menu">
-        <div class="menu"><?php wp_nav_menu(
-                array(
-                    'theme_location' => 'menu-1',
-                    'menu' => 'Footer menu',
-                    'menu_class' => 'footer-menu',
-                )
-            ) ?>
+        <div class="menu">
+            <?php 
+                if (pll_current_language() == 'en') {
+                    echo wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu' => 'Footer menu',
+                            'menu_class' => 'footer-menu',
+                        )
+                    );
+                } else if (pll_current_language() == 'de') {
+                    echo wp_nav_menu(
+                        array(
+                            'theme_location' => 'menu-1',
+                            'menu' => 'Footer menu de',
+                            'menu_class' => 'footer-menu',
+                            'menu_id' => 'menu-footer-menu',
+                            'container_class' => 'menu-footer-menu-container',
+                        )
+                    );
+                }
+            ?>
         </div>
     </div>
     <div class="footer-icon">
@@ -34,8 +49,25 @@
 </footer><!-- #colophon -->
 <hr class="footer_hr">
 <div class="footer-privacy-policy">
-    <span>2018-<?php echo date("Y"); ?> © All rights reserved</span>
-    <a href="<?php echo get_permalink(3) ?>" class="privacy-page">Privacy Policy</a>
+    <span>
+        2018-<?php echo date("Y"); ?>
+        <?php
+            if (pll_current_language() == 'en') {
+                echo "© All rights reserved";
+            } else if (pll_current_language() == 'de') {
+                echo "Alle Rechte vorbehalten";
+            }
+        ?>
+    </span>
+    <a href="<?php echo get_permalink(3) ?>" class="privacy-page">
+        <?php
+            if (pll_current_language() == 'en') {
+                echo "Privacy Policy";
+            } else if (pll_current_language() == 'de') {
+                echo "Datenschutzrichtlinie";
+            }
+        ?>
+    </a>
     </div>
 </div><!-- #page -->
 

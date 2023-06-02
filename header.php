@@ -25,7 +25,16 @@
 <body <?php body_class();?>> <?php wp_body_open();?>
 
 <div id="page" class="site">
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i>&nbsp;UP</button>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="arrow up"></i>&nbsp;
+        <?php
+            if (pll_current_language() == 'en') {
+                echo "UP";
+            } else if (pll_current_language() == 'de') {
+                echo "HOCH";
+            }
+        ?>
+    </button>
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'clean');?></a>
     <div class="background-header <?php if (is_front_page()) echo 'black-header'; ?>">
         <header id="masthead" class="site-header">
@@ -46,13 +55,25 @@
                     <i class="fas fa-bars"></i>
                 </button>
                 <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location' => 'menu-1',
-                        'menu' => 'Main-header-menu',
-                        'menu_class' => 'main-menu',
-                    )
-                );
+                    if (pll_current_language() == 'en') {
+                        echo wp_nav_menu(
+                            array(
+                                'theme_location' => 'menu-1',
+                                'menu' => 'Main-header-menu',
+                                'menu_class' => 'main-menu',
+                            )
+                        );
+                    } else if (pll_current_language() == 'de') {
+                        echo wp_nav_menu(
+                            array(
+                                'theme_location' => 'menu-1',
+                                'menu' => 'Main-menu-de',
+                                'menu_class' => 'main-menu',
+                                'menu_id' => 'menu-main-header-menu',
+                                'container_class' => 'menu-main-header-menu-container',
+                            )
+                        );
+                    }
                 ?>
                 
                 <li id="header-social-icons">

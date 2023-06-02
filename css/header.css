@@ -550,7 +550,7 @@ color: #005BBB;
   top: 85.3vh;
 } */
 #menu-main-header-menu .cat-no-child a{
-  background: linear-gradient(256.44deg, #536DFE 0.5%, #005BBB 100.05%);
+  background: black;
   color: #fff;
   border-radius: 0.5rem;
   width: 90vw;

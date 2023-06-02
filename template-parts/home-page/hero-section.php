@@ -33,7 +33,14 @@
                 <div class="action">
                     <div class="btn-wrapper">
                         <a class="rh-button" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-                            <?php echo do_shortcode('[product_count]') ?> available employees!
+                            <?php echo do_shortcode('[product_count]') ?>
+                            <?php
+                                if (pll_current_language() == 'en') {
+                                    echo "available employees!";
+                                } else if (pll_current_language() == 'de') {
+                                    echo "verfügbare Mitarbeiter!";
+                                }
+                            ?>
                         </a>
                     </div>
                 </div>

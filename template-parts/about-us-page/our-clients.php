@@ -5,7 +5,15 @@
 ?>
         <section class="padding-3 our-clients">
             <div class="section-title-box element-hidden">
-                <h2 class="section-title">Here from our clients!</h2>
+                <h2 class="section-title">
+                <?php
+                    if (pll_current_language() == 'en') {
+                        echo "Here from our clients!";
+                    } else if (pll_current_language() == 'de') {
+                        echo "Hier von unseren Kunden!";
+                    }
+                ?>
+                </h2>
             </div>
             <ul class="clients-slider clients-slider-left">
                 <?php

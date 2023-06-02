@@ -1,4 +1,7 @@
-jQuery(document).ready(function() { 
+jQuery(document).ready(function() {
+  // DEFINE CURRENT LANGUAGE FROM <html lang="...">
+  let currentLang = document.getElementsByTagName("html")[0].getAttribute("lang").split('-')[0];
+
   //CREATE NECESSARY INPUTS
       const fields = [
     {
@@ -97,6 +100,11 @@ jQuery(document).ready(function() {
   //CREATE MODAL WINDOW ELEMENTS       
   let h2tag = document.createElement("h2");
   let h2text = document.createTextNode("Thank You!");
+
+  if (currentLang === 'de') {
+    h2text = document.createTextNode("Dankeschön!");
+  }
+
   h2tag.appendChild(h2text);
   let h2element = document.getElementsByClassName("backdrop");
   h2element[0].appendChild(h2tag);   
@@ -109,12 +117,22 @@ jQuery(document).ready(function() {
       
   let h4tag = document.createElement("h4");
   let h4text = document.createTextNode("We have received your message!");
+
+  if (currentLang === 'de') {
+    h4text = document.createTextNode("Wir haben Ihre Nachricht erhalten!");
+  }
+
   h4tag.appendChild(h4text);
   let h4element = document.getElementsByClassName("backdrop");
   h4element[0].appendChild(h4tag);   
   
   let h5tag = document.createElement("h5");
   let h5text = document.createTextNode("Our manager will contact you as soon as possible.");
+
+  if (currentLang === 'de') {
+    h5text = document.createTextNode("Unser Manager wird Sie so schnell wie möglich kontaktieren.");
+  }
+
   h5tag.appendChild(h5text);
   let h5element = document.getElementsByClassName("backdrop");
   h5element[0].appendChild(h5tag);    
@@ -250,4 +268,15 @@ jQuery(document).ready(function() {
     refs.backdrop.classList.remove("is-visible");
     formcrm.classList.remove('blur-form');
   }
-  });
+
+// CHANGE FORM PLACEHOLDERS TEXT TO DEUTSCH
+  if (currentLang === 'de') {
+    let crmFormContainer = document.querySelector("#label-container-id");
+    crmFormContainer.querySelector('[name="client_name"]').setAttribute("placeholder", "Deutsch");
+    crmFormContainer.querySelector('[name="client_phone"]').setAttribute("placeholder", "Telefon");
+    crmFormContainer.querySelector('[name="client_email"]').setAttribute("placeholder", "E-Mail");
+    crmFormContainer.querySelector('[name="client_notes"]').setAttribute("placeholder", "Botschaft");
+    crmFormContainer.querySelector('[name="submit_button"]').setAttribute("value", "Senden");
+  }
+
+});

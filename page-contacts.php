@@ -16,7 +16,7 @@ get_header(); ?>
                 <section class="contacts-hero">
                     <div class="contacts-inner">
                         <div class="contacts-inner-left">
-                            <h1>We'd Love to hear From You</h1>
+                            <h1><?php the_field('contacts_title'); ?></h1>
                         </div>
                         <div class="contacts-inner-global">
                             <div class="contacts-inner-global-content">
@@ -60,7 +60,15 @@ get_header(); ?>
                     <div class="container">
                         <div class="contact-about-left">
                             <div class="contact-about-left-social">
-                                <h3>Follow us:</h3>
+                                <h3>
+                                    <?php
+                                        if (pll_current_language() == 'en') {
+                                            echo "Follow us:";
+                                        } else if (pll_current_language() == 'de') {
+                                            echo "Folgen Sie uns:";
+                                        }
+                                    ?>
+                                </h3>
                                 <div class="contact-about-left-social-container">
                                     <?php
                                     if (have_rows('fixed_social', 'option')) :

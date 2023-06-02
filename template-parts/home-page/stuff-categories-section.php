@@ -13,7 +13,15 @@
                 <div class="background-decoration element-hidden"></div>
                 <div class="background-decoration element-hidden"></div>
                 <div class="section-title-box element-hidden">
-                    <h2 class="section-title">Choose remote staff in different categories</h2>
+                    <h2 class="section-title">
+                        <?php
+                            if (pll_current_language() == 'en') {
+                                echo "Choose remote staff in different categories";
+                            } else if (pll_current_language() == 'de') {
+                                echo "Wählen Sie Remote-Mitarbeiter in verschiedenen Kategorien";
+                            }
+                        ?>
+                    </h2>
                 </div>
             <div class="category_section">
             <?php

@@ -23,7 +23,15 @@
                     endwhile;
                 endif
                 ?>
-                <li style="text-decoration: underline"><strong>Here we go!</strong></li>
+                <li style="text-decoration: underline"><strong>
+                    <?php
+                        if (pll_current_language() == 'en') {
+                            echo "Here we go!";
+                        } else if (pll_current_language() == 'de') {
+                            echo "Los geht's!";
+                        }
+                    ?>
+                </strong></li>
             </ul>
         </div>
         <img src="<?php the_field('save_and_safe_picture') ?>" alt="photo">
