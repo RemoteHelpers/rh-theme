@@ -241,6 +241,8 @@ function clean_scripts()
         wp_enqueue_script('jquery-pricing', '//code.jquery.com/jquery-1.11.0.min.js', array(), _S_VERSION, true);
         wp_enqueue_script('slick-pricing', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array(), _S_VERSION, true);
         wp_enqueue_script('pricing-js', get_template_directory_uri() . '/js/pricing.js', array(), _S_VERSION, true);
+
+        wp_enqueue_script('form-page', get_template_directory_uri() . '/js/custom-form.js', array(), _S_VERSION, true);
     }
     if (is_page('affiliate-page')) {
         wp_enqueue_style('affiliate-page-style', get_template_directory_uri() . '/css/affiliate-page.css', false, '1.1', 'all');

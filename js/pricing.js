@@ -1,55 +1,20 @@
-//Pricing Cards Sliders on responsive view
-if(document.documentElement.clientWidth < 1024) {
-  $('.pricing-cards-full').slick({
-   dots: true,
-   infinite: true,
-   arrows: true,
-   speed: 300,
-   slidesToShow: 2,
-   responsive: [
-     {
-       breakpoint: 768,
-       settings: {
-        arrows: false,
-         centerPadding: '40px',
-         slidesToShow: 1
-       }
-     }
-   ]
- });
- $('.pricing-cards-part').slick({
-  dots: true,
-  infinite: true,
-  arrows: true,
-  speed: 300,
-  slidesToShow: 2,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerPadding: '40px',
+if(document.documentElement.clientWidth < 1401) {
+  $('.outstaffing__content').slick({
+    dots: true,
+    arrows: false,
+    variableWidth: true,
+    centerMode: true,
+    centerPadding: '0px',
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+        arrows: true,
+        dots: false,
         slidesToShow: 1
+        }
       }
-    }
-  ]
-});
- $('.pricing-cards-min').slick({
-  dots: true,
-  infinite: true,
-  arrows: true,
-  speed: 300,
-  slidesToShow: 2,
-  responsive: [
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        centerPadding: '40px',
-        slidesToShow: 1
-      }
-    }
-  ]
+    ]
 });
 }
 
@@ -68,16 +33,3 @@ function openPrice(evt, priceName) {
   document.getElementById(priceName).style.animation = "opacityAnim .5s ease-in-out";
   evt.currentTarget.className += " active";
   }
-
-//Update pricing Slider on Time work Type change
-if(document.documentElement.clientWidth < 1024) {
-  $('.tab-parttime').click(function() {
-    $('.pricing-cards-part').slick('refresh');
-  });
-  $('.tab-minimum').click(function() {
-    $('.pricing-cards-min').slick('refresh');
-  });
-  $('.tab-fulltime').click(function() {
-    $('.pricing-cards-full').slick('refresh');
-  });
-}

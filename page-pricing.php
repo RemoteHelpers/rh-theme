@@ -17,6 +17,7 @@ get_header();
         <?php get_template_part('/template-parts/pricing-page/special-offer-section'); ?> 
         <?php endif; ?>
 
+        <?php get_template_part('/template-parts/pricing-page/questions-section'); ?>
     </div>
 
 

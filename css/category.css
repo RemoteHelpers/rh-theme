@@ -1583,7 +1583,7 @@
   color: #54595F;
   text-align: center;
   margin: 0;
-  padding: 2rem 0 2rem 0;
+  padding: 0 !important;
 }
 .form_subtitle{
   font-family: 'Montserrat';
@@ -2014,9 +2014,6 @@
 }
 .send-form-button {
   cursor: pointer;
-}
-#footer_form_faq {
-  padding-top: 4rem;
 }
 .custom_cards .sub_category_block_wrap{
   width: 80%;
