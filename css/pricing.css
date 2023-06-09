@@ -228,7 +228,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 0 auto 100px;
+  margin: 45px auto 100px;
 }
 
 .pricing .outstaffing__card {
@@ -746,6 +746,10 @@ to {opacity: 1; transform: scale(1);}
   margin: 0;
 }
 
+#footer_form_faq.home-contact {
+  margin-top: 40px;
+}
+
 #footer_form_faq .container .form_question_container .question_container {
   margin-top: 0;
   box-shadow: none;
@@ -772,6 +776,10 @@ to {opacity: 1; transform: scale(1);}
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+
+  .pricing .outstaffing__content {
+    margin-top: 0;
   }
 
   .outstaffing__card.slick-slide {
@@ -820,6 +828,10 @@ to {opacity: 1; transform: scale(1);}
   #footer_form_faq {
     padding-top: 1.75rem;
     width: 730px;
+  }
+
+  #footer_form_faq.home-contact {
+    margin-top: 0;
   }
 }
 
