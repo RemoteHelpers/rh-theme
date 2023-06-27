@@ -72,7 +72,7 @@
             
         </header>
         <div class="widget_shopping_cart_content" id="mini-cart"><?woocommerce_mini_cart();?></div>
-        <div class="lang-switcher"><?php pll_the_languages( array( 'dropdown' => 1 ) ); ?></div>
+        <!-- <div class="lang-switcher"><?php pll_the_languages( array( 'dropdown' => 1 ) ); ?></div> -->
         <div class="social__fixed">
             <?php
             if (have_rows('fixed_social', 'option')) :
