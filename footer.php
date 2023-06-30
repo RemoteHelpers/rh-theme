@@ -41,7 +41,7 @@
 
 <?php wp_footer(); ?>
 
-<!-- <script type="text/javascript" src="//testnine.rh-s.com/en/widget.js"></script> -->
+ <script type="text/javascript" src="//videochat.rhelpers.com/widget.js"></script>
 <!-- <script type="text/javascript" src="//chat.vamsite.today/widget.js"></script> -->
 
 

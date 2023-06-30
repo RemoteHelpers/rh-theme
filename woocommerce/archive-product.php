@@ -68,7 +68,7 @@ $term = get_queried_object();
             <div class="content-with-sidebar">
                 <div class="sidebar">
                     <div class="sticky-filter">
-                        <?php echo do_shortcode('[pwf_filter id="323"]'); ?>
+                         <?php echo do_shortcode('[pwf_filter id="323"]'); ?>
                     </div>
                     <div class="btn-container">
                         <div class="hide-btn only-desktop">
@@ -80,6 +80,8 @@ $term = get_queried_object();
                     <span class="bc-circle pink"></span>
                     <span class="bc-circle big yellow"></span>
                     <span class="bc-circle big blue"></span>
+					                    <!-- ya shop -->
+
                         <?php
                         if (woocommerce_product_loop()) {
                             woocommerce_product_loop_start();
