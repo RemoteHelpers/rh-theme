@@ -72,7 +72,7 @@
             
         </header>
         <div class="widget_shopping_cart_content" id="mini-cart"><?woocommerce_mini_cart();?></div>
-
+<!-- test -->
         <div class="social__fixed">
             <?php
             if (have_rows('fixed_social', 'option')) :
